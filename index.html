@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BasuraMo | Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <div class="card">
+
+      <img src="trash-icon.png" class="logo" alt="Logo">
+
+      <h1>Welcome to BasuraMo</h1>
+      <p class="subtitle">Smart Waste Management System</p>
+
+      <form id="loginForm">
+        <label for="userNumber">User Number</label>
+        <input
+          type="text"
+          id="userNumber"
+          placeholder="Enter your user number"
+          aria-label="User Number"
+        />
+
+        <button type="submit">Sign In</button>
+      </form>
+
+      <div class="info">
+        <p><strong>New user?</strong> Your user number is found on your waste card.</p>
+        <p class="support">Contact support@basuramo.com</p>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      const user = document.getElementById("userNumber").value.trim();
+
+      if (user === "") {
+        alert("Please enter your user number");
+        return;
+      }
+
+      localStorage.setItem("userNumber", user);
+      window.location.href = "dashboard.html";
+    });
+  </script>
+
+</body>
+</html>

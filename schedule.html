@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BasuraMo | Schedule</title>
+    <link rel="stylesheet" href="schedule.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <header class="topbar">
+            <div class="brand">
+                <img src="trash-icon.png" class="logo" alt="BasuraMo Logo">
+                <div>
+                    <h3>BasuraMo</h3>
+                    <span id="userId"></span>
+                </div>
+            </div>
+            <div class="menu">☰</div>
+        </header>
+
+        <section class="schedule-content">
+            <h2>Collection Schedule</h2>
+            <p>View and manage your waste collection calendar</p>
+
+            <div class="calendar">
+                <div class="calendar-header">
+                    <button class="prev-month">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <h2 class="current-month">November 2025</h2>
+                    <button class="next-month">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="calendar-body">
+                    <div class="calendar-weekdays">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                    </div>
+                    <div class="calendar-days">
+                        <!-- The days will be dynamically added here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Collection Types Section -->
+        <section class="collection-types section">
+            <h3>Collection Types</h3>
+            <div class="type">
+                <div class="icon blue">
+                    <i class="fa-solid fa-recycle"></i>
+                </div>
+                <div class="info">
+                    <strong>Recyclables</strong>
+                    <span>Every Friday</span>
+                </div>
+            </div>
+            <div class="type">
+                <div class="icon green">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+                <div class="info">
+                    <strong>Organic Waste</strong>
+                    <span>Every Saturday</span>
+                </div>
+            </div>
+            <div class="type">
+                <div class="icon gray">
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+                <div class="info">
+                    <strong>General Waste</strong>
+                    <span>Every Monday</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Collections Section -->
+        <section class="upcoming-collections section">
+            <h3>Upcoming Collections</h3>
+            <div class="collection">
+                <div class="icon blue">
+                    <i class="fa-solid fa-recycle"></i>
+                </div>
+                <div class="info">
+                    <strong>Recyclables</strong>
+                    <span>Sat, Nov 29 • 7:00 AM</span>
+                </div>
+                <button class="notification-button">
+                    <i class="fa-solid fa-bell"></i>
+                </button>
+            </div>
+            <div class="collection">
+                <div class="icon green">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+                <div class="info">
+                    <strong>Organic</strong>
+                    <span>Sun, Nov 30 • 7:00 AM</span>
+                </div>
+                <button class="notification-button">
+                    <i class="fa-solid fa-bell"></i>
+                </button>
+            </div>
+            <div class="collection">
+                <div class="icon gray">
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+                <div class="info">
+                    <strong>General</strong>
+                    <span>Tue, Dec 2 • 7:00 AM</span>
+                </div>
+                <button class="notification-button">
+                    <i class="fa-solid fa-bell"></i>
+                </button>
+            </div>
+            <div class="collection">
+                <div class="icon blue">
+                    <i class="fa-solid fa-recycle"></i>
+                </div>
+                <div class="info">
+                    <strong>Recyclables</strong>
+                    <span>Sat, Dec 6 • 7:00 AM</span>
+                </div>
+                <button class="notification-button disabled">
+                    <i class="fa-solid fa-bell-slash"></i>
+                </button>
+            </div>
+            <div class="collection">
+                <div class="icon green">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+                <div class="info">
+                    <strong>Organic</strong>
+                    <span>Sun, Dec 7 • 7:00 AM</span>
+                </div>
+                <button class="notification-button disabled">
+                    <i class="fa-solid fa-bell-slash"></i>
+                </button>
+            </div>
+        </section>
+
+        <nav class="bottom-nav">
+    <a href="dashboard.html"><button>🏠<span>Home</span></button></a>
+    <a href="scan.html"><button>📷<span>Scan</span></button></a>
+    <a href="schedule.html"><button class="active">📅<span>Schedule</span></button></a>
+    <a href="settings.html"><button>⚙<span>Settings</span></button></a>
+    </nav>
+    </div>
+
+    <script src="schedule.js"></script>  <!-- ADD THIS LINE -->
+</body>
+</html>

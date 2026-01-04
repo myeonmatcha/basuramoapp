@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BasuraMo | Settings</title>
+    <link rel="stylesheet" href="settings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <header class="topbar">
+            <div class="brand">
+                <img src="trash-icon.png" class="logo" alt="BasuraMo Logo">
+                <div>
+                    <h3>BasuraMo</h3>
+                    <span id="userId"></span>
+                </div>
+            </div>
+            <div class="menu">☰</div>
+        </header>
+
+        <section class="settings-content">
+            <h2>Settings</h2>
+            <p>Manage your preferences and notifications</p>
+
+            <div class="setting-card">
+                <div class="setting-header">
+                    <div class="setting-title">
+                        <i class="fa-solid fa-user"></i>
+                        <span>User #<span id="userNumberDisplay"></span></span>
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+                <p class="setting-description">Member since Nov 2025</p>
+            </div>
+
+            <div class="setting-card">
+                <div class="setting-header">
+                    <div class="setting-title">
+                        <i class="fa-solid fa-sun"></i>
+                        <span>Dark Mode</span>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <p class="setting-description">Disabled</p>
+            </div>
+
+            <div class="setting-card">
+                <div class="setting-header">
+                    <div class="setting-title">
+                        <i class="fa-solid fa-bell"></i>
+                        <span>Collection Reminders</span>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <p class="setting-description">Get notified before collection days</p>
+                <div class="setting-details">
+                    <div class="setting-item">
+                        <label>Day before collection</label>
+                        <input type="checkbox" checked>
+                    </div>
+                    <div class="setting-item">
+                        <label>Morning of collection</label>
+                        <input type="checkbox" checked>
+                    </div>
+                    <div class="setting-item">
+                        <label>Reminder time</label>
+                        <div class="reminder-time">
+                            <input type="time" value="06:00">
+                            <span>PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="setting-card">
+                <div class="setting-header">
+                    <div class="setting-title">
+                        <i class="fa-solid fa-camera"></i>
+                        <span>Scan Results</span>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <p class="setting-description">Notify when waste is identified</p>
+            </div>
+
+            <div class="setting-card">
+                <div class="setting-header">
+                    <div class="setting-title">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <span>Weekly Report</span>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <p class="setting-description">Receive weekly waste summary</p>
+            </div>
+
+            <div class="setting-card sign-out">
+                <div class="setting-header">
+                    <div class="setting-title">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        <span>Sign Out</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+        </section>
+
+        <nav class="bottom-nav">
+            <a href="dashboard.html"><button>🏠<span>Home</span></button></a>
+            <a href="scan.html"><button>📷<span>Scan</span></button></a>
+            <a href="schedule.html"><button>📅<span>Schedule</span></button></a>
+            <button class="active">⚙<span>Settings</span></button>
+        </nav>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get user number from local storage
+            const userNumber = localStorage.getItem('userNumber');
+            if (userNumber) {
+                document.getElementById('userId').textContent = `User #${userNumber}`;
+                document.getElementById('userNumberDisplay').textContent = userNumber;
+            } else {
+                // Redirect to login if no user number is found
+                window.location.href = 'login.html';
+            }
+        });
+   <script src="settings.js"></script>
+</body>
+</html>

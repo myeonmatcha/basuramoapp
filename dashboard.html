@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BasuraMo | Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="brand">
+      <img src="trash-icon.png" class="logo" alt="BasuraMo Logo">
+      <div>
+        <h3>BasuraMo</h3>
+        <span id="userId"></span>
+      </div>
+    </div>
+    <div class="menu">☰</div>
+  </header>
+
+  <!-- WELCOME CARD -->
+  <section class="welcome">
+    <h2>Welcome back!</h2>
+    <p>You have <strong>3 upcoming collections</strong> this week</p>
+    <div class="pickup">
+      ⏰ Next pickup in 3 hours
+    </div>
+  </section>
+
+  <!-- UPCOMING COLLECTIONS -->
+  <section class="section">
+    <h4>Upcoming Collections</h4>
+
+    <div class="collection">
+      <div class="icon blue">♻</div>
+      <div class="info">
+        <strong>Recyclables</strong>
+        <span id="recyclablesDate"></span>
+      </div>
+      <span class="badge today">Today</span>
+    </div>
+
+    <div class="collection">
+      <div class="icon green">🌿</div>
+      <div class="info">
+        <strong>Organic Waste</strong>
+        <span id="organicDate"></span>
+      </div>
+      <span class="badge tomorrow">Tomorrow</span>
+    </div>
+
+    <div class="collection">
+      <div class="icon gray">🗑</div>
+      <div class="info">
+        <strong>General Waste</strong>
+        <span id="generalDate"></span>
+      </div>
+      <span class="badge later">3 days</span>
+    </div>
+  </section>
+
+  <!-- IMPACT -->
+  <section class="section">
+    <h4>Your Impact</h4>
+
+    <div class="impact">
+      <div class="impact-card">
+        <div class="impact-icon blue">♻</div>
+        <h3>156</h3>
+        <p>Items Recycled</p>
+        <span class="change">+12%</span>
+      </div>
+
+      <div class="impact-card">
+        <div class="impact-icon purple">📅</div>
+        <h3>24</h3>
+        <p>Collections</p>
+        <span class="tag">This month</span>
+      </div>
+
+      <div class="impact-card">
+        <div class="impact-icon green">📈</div>
+        <h3>34kg</h3>
+        <p>Waste Reduced</p>
+        <span class="change">+8%</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENT ACTIVITY -->
+  <section class="section">
+    <h4>Recent Activity</h4>
+
+    <div class="activity">
+      <div class="icon blue">♻</div>
+      <div class="info">
+        <strong>Recyclables collected</strong>
+        <span>Nov 27, 2025</span>
+      </div>
+      <span>8 items</span>
+    </div>
+
+    <div class="activity">
+      <div class="icon green">🌿</div>
+      <div class="info">
+        <strong>Organic waste collected</strong>
+        <span>Nov 25, 2025</span>
+      </div>
+      <span>12 items</span>
+    </div>
+
+    <div class="activity">
+      <div class="icon gray">🗑</div>
+      <div class="info">
+        <strong>General waste collected</strong>
+        <span>Nov 24, 2025</span>
+      </div>
+      <span>15 items</span>
+    </div>
+  </section>
+
+  <!-- BOTTOM NAV -->
+  <nav class="bottom-nav">
+    <a href="dashboard.html"><button class="active">🏠<span>Home</span></button></a>
+    <a href="scan.html"><button>📷<span>Scan</span></button></a>
+    <a href="schedule.html"><button>📅<span>Schedule</span></button></a>
+    <a href="settings.html"><button>⚙<span>Settings</span></button></a>
+</nav>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get user number from local storage
+      const userNumber = localStorage.getItem('userNumber');
+      if (userNumber) {
+        document.getElementById('userId').textContent = `User #${userNumber}`;
+      } else {
+        // Redirect to login if no user number is found
+        window.location.href = 'login.html';
+      }
+
+      // Function to format date
+      function formatDate(date) {
+        const options = { month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric' };
+        return date.toLocaleDateString('en-US', options);
+      }
+
+      // Calculate and display collection dates
+      const today = new Date();
+      const tomorrow = new Date(today);
+      tomorrow.setDate(today.getDate() + 1);
+      const dayAfterTomorrow = new Date(today);
+      dayAfterTomorrow.setDate(today.getDate() + 3);
+
+      document.getElementById('recyclablesDate').textContent = formatDate(today);
+      document.getElementById('organicDate').textContent = formatDate(tomorrow);
+      document.getElementById('generalDate').textContent = formatDate(dayAfterTomorrow);
+    });
+  </script>
+
+</body>
+</html>

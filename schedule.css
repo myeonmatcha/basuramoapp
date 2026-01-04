@@ -1,0 +1,271 @@
+/* schedule.css */
+
+/* General Styles */
+body {
+    font-family: system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f8fb; /* Match dashboard background */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure full height */
+}
+
+/* Top Bar Styles */
+.topbar {
+    background-color: #fff;
+    padding: 14px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 28px;
+}
+
+.brand h3 {
+    font-size: 15px;
+}
+
+.brand span {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* Schedule Content Styles */
+.schedule-content {
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1; /* Take up remaining space */
+}
+
+.schedule-content h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Calendar Styles */
+.calendar {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin: 20px auto;
+    width: 90%;
+    max-width: 600px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.calendar-header h2 {
+    font-size: 18px;
+}
+
+.calendar-header button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #6b7280; /* Muted color for buttons */
+}
+
+.calendar-header button:hover {
+    color: #333; /* Darker color on hover */
+}
+
+.calendar-body {
+    padding: 10px;
+}
+
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-size: 14px;
+    color: #6b7280;
+    font-weight: bold;
+}
+
+.calendar-weekdays div {
+    text-align: center;
+    padding: 8px 0;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+}
+
+.calendar-days div {
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.calendar-days div:hover {
+    background-color: #f0f0f0;
+}
+
+/* General Section Styling */
+.section {
+    margin: 16px;
+}
+
+.section h3 {
+    margin-bottom: 12px;
+    font-size: 15px;
+    text-align: left; /* Align section titles to the left */
+}
+
+/* Collection Types Styling */
+.collection-types {
+    background: white;
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.collection-types .type {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    text-align: left; /* Align content within types to the left */
+}
+
+.collection-types .icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+}
+
+.collection-types .info {
+    flex: 1;
+}
+
+.collection-types .info strong {
+    display: block;
+    font-size: 14px;
+}
+
+.collection-types .info span {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* Upcoming Collections Styling */
+.upcoming-collections {
+    background: white;
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.upcoming-collections .collection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Align items and notification button */
+    gap: 12px;
+    margin-bottom: 10px;
+    text-align: left; /* Align content within collections to the left */
+}
+
+.upcoming-collections .icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+}
+
+.upcoming-collections .info {
+    flex: 1;
+}
+
+.upcoming-collections .info strong {
+    display: block;
+    font-size: 14px;
+}
+
+.upcoming-collections .info span {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.upcoming-collections .notification-button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #00c853; /* Green color for active notifications */
+    cursor: pointer;
+}
+
+.upcoming-collections .notification-button.disabled {
+    color: #6b7280; /* Gray color for disabled notifications */
+}
+
+/* Color Palette */
+.blue {
+    background: #2f80ff;
+}
+
+.green {
+    background: #00c853;
+}
+
+.gray {
+    background: #6b7280;
+}
+
+/* Bottom Navigation Styles */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.bottom-nav button {
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.bottom-nav .active {
+    color: #00c853;
+}

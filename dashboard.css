@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  background: #f2f8fb;
+  padding-bottom: 80px;
+}
+
+/* TOP BAR */
+.topbar {
+  background: #ffffff;
+  padding: 14px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 28px;
+}
+
+.brand h3 {
+  font-size: 15px;
+}
+
+.brand span {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.menu {
+  font-size: 22px;
+}
+
+/* WELCOME */
+.welcome {
+  margin: 16px;
+  background: #00b85c;
+  color: white;
+  border-radius: 18px;
+  padding: 22px;
+}
+
+.welcome h2 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.pickup {
+  margin-top: 12px;
+  background: rgba(255,255,255,0.2);
+  padding: 8px 14px;
+  border-radius: 22px;
+  display: inline-block;
+  font-size: 13px;
+}
+
+/* SECTIONS */
+.section {
+  margin: 16px;
+}
+
+.section h4 {
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+/* COLLECTIONS */
+.collection, .activity {
+  background: white;
+  border-radius: 14px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.info {
+  flex: 1;
+}
+
+.info span {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+}
+
+.blue { background: #2f80ff; }
+.green { background: #00c853; }
+.gray { background: #6b7280; }
+.purple { background: #a855f7; }
+
+/* BADGES */
+.badge {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 14px;
+}
+
+.today { background: #ffe4e6; color: #be123c; }
+.tomorrow { background: #fff7ed; color: #c2410c; }
+.later { background: #e5e7eb; }
+
+/* IMPACT */
+.impact {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.impact-card {
+  background: white;
+  border-radius: 14px;
+  padding: 14px;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.impact-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.impact-card h3 {
+  font-size: 18px;
+}
+
+.impact-card p {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.change, .tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 11px;
+  background: #ecfdf3;
+  color: #16a34a;
+  padding: 3px 8px;
+  border-radius: 10px;
+}
+
+/* BOTTOM NAV */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+
+.bottom-nav button {
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.bottom-nav .active {
+  color: #00c853;
+}

@@ -1,0 +1,209 @@
+/* scan.css */
+
+body {
+    font-family: system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f8fb; /* Match dashboard background */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure full height */
+}
+
+.topbar {
+    background-color: #fff;
+    padding: 14px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 28px;
+}
+
+.brand h3 {
+    font-size: 15px;
+}
+
+.brand span {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.scan-content {
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1; /* Take up remaining space */
+}
+
+.scan-content h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.scan-area {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.camera-icon img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+
+.scan-content .instruction {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.scan-buttons button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.scan-buttons .take-photo {
+    background-color: #00b85c;
+    color: white;
+}
+
+.scan-buttons .upload-image {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.bottom-nav button {
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.bottom-nav .active {
+    color: #00c853;
+}
+/* scan.css (continued) */
+
+/* General Section Styling */
+.section {
+    margin: 16px;
+}
+
+.section h3 {
+    margin-bottom: 12px;
+    font-size: 15px;
+    text-align: left; /* Align section titles to the left */
+}
+
+/* Waste Categories Styling */
+.waste-categories {
+    background: white;
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.waste-categories .category {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    text-align: left; /* Align content within types to the left */
+}
+
+.waste-categories .icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+}
+
+.waste-categories .info {
+    flex: 1;
+}
+
+.waste-categories .info strong {
+    display: block;
+    font-size: 14px;
+}
+
+.waste-categories .info span {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* Tips for Better Recognition Styling */
+.tips-recognition {
+    background: white;
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.tips-recognition ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tips-recognition li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.tips-recognition li i {
+    color: #00c853;
+}
+
+/* Color Palette */
+.blue {
+    background: #2f80ff;
+}
+
+.green {
+    background: #00c853;
+}
+
+.gray {
+    background: #6b7280;
+}

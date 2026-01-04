@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BasuraMo | Scan</title>
+    <link rel="stylesheet" href="scan.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="container">
+        <header class="topbar">
+            <div class="brand">
+                <img src="trash-icon.png" class="logo" alt="BasuraMo Logo">
+                <div>
+                    <h3>BasuraMo</h3>
+                    <span id="userId"></span>
+                </div>
+            </div>
+            <div class="menu">☰</div>
+        </header>
+
+        <section class="scan-content">
+            <h2>Waste Recognition</h2>
+            <p>Take a photo or upload an image to identify waste type</p>
+
+            <div class="scan-area">
+                <div class="camera-icon">
+                    <img src="camera-icon.png" alt="Camera Icon">
+                </div>
+                <p>Scan Your Waste</p>
+                <p class="instruction">Take a photo or upload an image to instantly identify the waste type and get disposal instructions</p>
+            </div>
+
+            <div class="scan-buttons">
+                <button class="take-photo" id="takePhotoBtn">
+                    <img src="camera-icon.png" alt="Take Photo Icon">
+                    Take Photo
+                </button>
+                <button class="upload-image" id="uploadImageBtn">
+                    <img src="upload-icon.png" alt="Upload Image Icon">
+                    Upload Image
+                </button>
+            </div>
+        </section>
+
+        <!-- Waste Categories Section -->
+        <section class="waste-categories section">
+            <h3>Waste Categories</h3>
+            <div class="category">
+                <div class="icon blue">
+                    <i class="fa-solid fa-recycle"></i>
+                </div>
+                <div class="info">
+                    <strong>Recyclable</strong>
+                    <span>Plastics, glass, metal, paper</span>
+                </div>
+            </div>
+            <div class="category">
+                <div class="icon green">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+                <div class="info">
+                    <strong>Organic</strong>
+                    <span>Food scraps, yard waste</span>
+                </div>
+            </div>
+            <div class="category">
+                <div class="icon gray">
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+                <div class="info">
+                    <strong>General Waste</strong>
+                    <span>Non-recyclable items</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips for Better Recognition Section -->
+        <section class="tips-recognition section">
+            <h3>Tips for Better Recognition</h3>
+            <ul>
+                <li><i class="fa-solid fa-check"></i> Ensure good lighting for clearer images</li>
+                <li><i class="fa-solid fa-check"></i> Keep the item centered in the frame</li>
+                <li><i class="fa-solid fa-check"></i> Take photos from multiple angles if unsure</li>
+            </ul>
+        </section>
+
+        <nav class="bottom-nav">
+            <a href="dashboard.html"><button>🏠<span>Home</span></button></a>
+            <a href="scan.html"><button class="active">📷<span>Scan</span></button></a>
+            <a href="schedule.html"><button>📅<span>Schedule</span></button></a>
+            <a href="settings.html"><button>⚙<span>Settings</span></button></a>
+        </nav>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get user number from local storage
+            const userNumber = localStorage.getItem('userNumber');
+            if (userNumber) {
+                document.getElementById('userId').textContent = `User #${userNumber}`;
+            } else {
+                // Redirect to login if no user number is found
+                window.location.href = 'login.html';
+            }
+
+            // Get references to the buttons
+            const takePhotoButton = document.getElementById('takePhotoBtn');
+            const uploadImageButton = document.getElementById('uploadImageBtn');
+
+            // Add event listeners to the buttons
+            takePhotoButton.addEventListener('click', function() {
+                alert('Simulating taking a photo...'); // Replace with actual camera functionality
+            });
+
+            uploadImageButton.addEventListener('click', function() {
+                alert('Simulating uploading an image...'); // Replace with actual file upload functionality
+            });
+        });
+    </script>
+
+</body>
+</html>
